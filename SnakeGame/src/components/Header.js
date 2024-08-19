@@ -6,7 +6,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 
 const Header = ({top, score, paused, pause, reload}) => {
 
-    const StyleHeader = {
+    const styleHeader = {
         height: HEADER_HEIGHT + top,
         backgroundColor: colors.p4,
         paddingTop: top,
@@ -14,7 +14,7 @@ const Header = ({top, score, paused, pause, reload}) => {
     }
 
     return (
-        <View style={[styleHeader, StyleSheet.Header]}>
+        <View style={[styleHeader, styles.Header]}>
             <TouchableOpacity onPress={reload}>
                 <Ionicons name="reload" size={26} color={colors.p6} />
             </TouchableOpacity>
@@ -25,7 +25,7 @@ const Header = ({top, score, paused, pause, reload}) => {
                 color={colors.p6}
                 />
             </TouchableOpacity>
-            <Text style={StyleSheet.score}>{score}</Text>
+            <Text style={styles.score}>{score}</Text>
         </View>
     )
 }
